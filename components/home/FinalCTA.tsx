@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { WHATSAPP_URL, ADDRESS } from "@/lib/constants";
 
 export default function FinalCTA() {
@@ -20,9 +21,9 @@ export default function FinalCTA() {
             >
               WhatsApp for Free Quote
             </a>
-            <a href="/contact" className="btn btn-outline btn-lg">
+            <Link href="/contact" className="btn btn-outline btn-lg">
               Visit Our Showroom
-            </a>
+            </Link>
           </div>
           <p className="final-cta-address">
             {ADDRESS.line1}, {ADDRESS.line2} — Mon–Sat 10 AM to 6 PM

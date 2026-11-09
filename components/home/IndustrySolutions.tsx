@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { industrySolutions } from "@/data/industries";
 
 export default function IndustrySolutions() {
@@ -17,7 +18,7 @@ export default function IndustrySolutions() {
             <div key={s.id} className="industry-card">
               <h3 className="industry-card-title">{s.title}</h3>
               <p className="industry-card-desc">{s.description}</p>
-              <a href={s.href} className="industry-cta">{s.cta}</a>
+              <Link href={s.href} className="industry-cta">{s.cta}</Link>
             </div>
           ))}
         </div>

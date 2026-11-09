@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { guides } from "@/data/industries";
 
 export default function ResourceGuides() {
@@ -13,7 +14,7 @@ export default function ResourceGuides() {
         </div>
         <div className="guides-grid">
           {guides.map((g) => (
-            <a
+            <Link
               key={g.id}
               href={g.href}
               className={`guide-card ${g.highlight ? "guide-card-highlight" : ""}`}
@@ -24,7 +25,7 @@ export default function ResourceGuides() {
               </div>
               <h3 className="guide-title">{g.title}</h3>
               {g.description && <p className="guide-desc">{g.description}</p>}
-            </a>
+            </Link>
           ))}
         </div>
       </div>

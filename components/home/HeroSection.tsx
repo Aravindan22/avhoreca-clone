@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { WHATSAPP_URL } from "@/lib/constants";
 
 export default function HeroSection() {
@@ -40,9 +41,9 @@ export default function HeroSection() {
                 </svg>
                 Get Free Quote on WhatsApp
               </a>
-              <a href="/products" className="btn btn-ghost-dark">
+              <Link href="/products" className="btn btn-ghost-dark">
                 Browse All Products →
-              </a>
+              </Link>
             </div>
             <div className="hero-stats">
               {[

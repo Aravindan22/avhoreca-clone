@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { WHATSAPP_URL } from "@/lib/constants";
 
 const serviceTags = [
@@ -38,9 +39,9 @@ export default function ServiceBanner() {
             >
               Book Service on WhatsApp
             </a>
-            <a href="/service" className="btn btn-ghost-light">
+            <Link href="/about" className="btn btn-ghost-light">
               Learn More →
-            </a>
+            </Link>
           </div>
         </div>
       </div>
