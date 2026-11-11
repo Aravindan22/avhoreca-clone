@@ -1,38 +1,45 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import { WHATSAPP_URL, PHONE_DISPLAY, PHONE_NUMBER } from "@/lib/constants";
+import Image from "next/image";
+import {
+  WHATSAPP_URL,
+  PHONE_DISPLAY,
+  PHONE_NUMBER,
+  BUSINESS_NAME,
+  BRAND_NAME,
+} from "@/lib/constants";
 
 const navLinks = [
   { label: "Home", href: "/" },
   {
-    label: "Products",
+    label: "HORECA Solutions",
     href: "/products",
     dropdown: [
-      { label: "Tea · Coffee · Milk Boilers", sub: "iBrew · Pradeep", href: "/products#tea-coffee" },
-      { label: "Table Top Electrical", sub: "Fryers · Steamers", href: "/products#electrical" },
-      { label: "Food & Beverage Equipment", sub: "Snacks · Cooking · Beverage", href: "/products#food-bev" },
-      { label: "Table Top Induction", sub: "Aeonic", href: "/products#induction" },
-      { label: "Bulk Induction Equipment", sub: "3-Phase · Hotels · Institutions", href: "/products#bulk-induction" },
-      { label: "Pots & Pans", sub: "NSF Certified", href: "/products#pots-pans" },
-      { label: "Copper Serveware", sub: "Premium", href: "/products#copper" },
-      { label: "Buffet Products", sub: "Chafers · Urns", href: "/products#buffet" },
-      { label: "View All Products →", sub: "80+ products across 8 categories", href: "/products", isAll: true },
+      { label: "Commercial Kitchen Equipment", sub: "Heavy duty preparation & utility", href: "/products#commercial-kitchen" },
+      { label: "Induction Cooking Systems", sub: "Commercial tabletop & bulk 3-phase", href: "/products#induction-cooking" },
+      { label: "Milk Boilers & Water Boilers", sub: "Insulated PUF 5L to 30L", href: "/products#milk-water-boilers" },
+      { label: "Tea & Coffee Brewing Equipment", sub: "South Indian filter & brewers", href: "/products#tea-coffee-brewing" },
+      { label: "Stainless Steel Cookware & Hotpots", sub: "Pradeep NSF certified SS 304", href: "/products#cookware-hotpots" },
+      { label: "Kitchen Infrastructure & Accessories", sub: "Modular storage, racks & buffet", href: "/products#infrastructure-accessories" },
+      { label: "View Complete Catalogue →", sub: "Authentic Pradeep products & systems", href: "/products", isAll: true },
     ],
   },
   {
-    label: "Industries",
-    href: "/products",
+    label: "Coverage Areas",
+    href: "/#coverage",
     dropdown: [
-      { label: "For Restaurants", sub: "Cafés · QSRs · Full-service", href: "/products" },
-      { label: "For Cloud Kitchens", sub: "Space-optimised setups", href: "/products" },
-      { label: "For Hotels", sub: "Bulk induction · Banquet", href: "/products" },
+      { label: "Salem (Showroom & HQ)", sub: "Meyyanur Junction Main Road", href: "/contact" },
+      { label: "Hosur & Krishnagiri", sub: "Authorized sales & delivery", href: "/#coverage" },
+      { label: "Dharmapuri & Tirupathur", sub: "Authorized sales & delivery", href: "/#coverage" },
+      { label: "Erode & Karur", sub: "Authorized sales & delivery", href: "/#coverage" },
+      { label: "Namakkal & Kallakurichi", sub: "Authorized sales & delivery", href: "/#coverage" },
+      { label: "Tiruchirappalli & Thanjavur", sub: "Authorized sales & delivery", href: "/#coverage" },
+      { label: "Thiruvannamalai", sub: "Authorized sales & delivery", href: "/#coverage" },
     ],
   },
-  { label: "Resources", href: "/resources" },
-  { label: "Service", href: "/service" },
-  { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
+  { label: "About DSK", href: "/about" },
+  { label: "Contact & Showroom", href: "/contact" },
 ];
 
 export default function Navbar() {
@@ -44,8 +51,20 @@ export default function Navbar() {
       <div className="container nav-inner">
         {/* Logo */}
         <Link href="/" className="nav-logo">
-          <span className="logo-icon">🍳</span>
-          <span className="logo-text">AV Horeca</span>
+          <Image
+            src="/images/dsk-logo.jpg"
+            alt={`${BRAND_NAME} - ${BUSINESS_NAME}`}
+            width={52}
+            height={52}
+            className="logo-img"
+            priority
+          />
+          <div className="logo-text-group">
+            <span className="logo-brand">
+              DSK <em>Kitchen</em>
+            </span>
+            <span className="logo-sub">Pradeep Authorised Dealer · Salem</span>
+          </div>
         </Link>
 
         {/* Desktop nav */}
@@ -82,7 +101,8 @@ export default function Navbar() {
         {/* Nav actions */}
         <div className="nav-actions">
           <a href={`tel:${PHONE_NUMBER}`} className="nav-phone">
-            {PHONE_DISPLAY}
+            <span>{PHONE_DISPLAY}</span>
+            <span className="nav-phone-loc">Meyyanur, Salem</span>
           </a>
           <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary nav-cta">
             Get Quote →
@@ -132,10 +152,10 @@ export default function Navbar() {
             ))}
             <div className="mobile-actions">
               <a href={`tel:${PHONE_NUMBER}`} className="btn btn-outline mobile-btn">
-                Call Us
+                Call: {PHONE_DISPLAY}
               </a>
               <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn btn-wa mobile-btn">
-                WhatsApp →
+                WhatsApp Us →
               </a>
             </div>
           </div>

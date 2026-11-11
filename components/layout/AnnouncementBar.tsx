@@ -4,15 +4,15 @@ import { WHATSAPP_URL } from "@/lib/constants";
 
 const announcements = [
   {
-    text: "Same-day delivery in Hyderabad for orders before 12 PM",
-    highlight: "Same-day delivery",
+    text: "Greetings from DSK Enterprises! Authorized Dealer of Pradeep Commercial Kitchen & Beverage Equipment",
+    highlight: "DSK Enterprises",
   },
   {
-    text: "Next-day delivery across AP & Telangana",
-    highlight: "Next-day",
+    text: "Authorized Dealer for Salem, Hosur, Dharmapuri, Erode, Karur, Trichy & 12 Districts",
+    highlight: "12 Districts in TN",
   },
   {
-    text: "Get a quote in 30 minutes",
+    text: "Visit our Salem Showroom: Meyyanur Junction Main Road — Get quote in 30 minutes",
     highlight: null,
     isLink: true,
   },
@@ -44,8 +44,8 @@ export default function AnnouncementBar() {
               {item.highlight ? (
                 <>
                   <strong className="announcement-highlight">{item.highlight}</strong>
-                  {" "}
-                  {item.text.replace(item.highlight, "").trim()}
+                  {" · "}
+                  {item.text}
                 </>
               ) : (
                 item.text

@@ -1,11 +1,13 @@
 const tickerItems = [
-  "Authorized Pradeep Channel Partner",
-  "iBrew Authorized Dealer",
-  "Aeonic Authorized Dealer",
-  "Display Centre — Nagole Hyderabad",
-  "Same-Day Delivery in Hyderabad",
-  "500+ Restaurants & Hotels Served",
-  "ISI · NSF · CE · SAA Certified",
+  "DSK Enterprises — DSK Kitchen Solutions",
+  "Authorised Dealer of Pradeep Stainless Kitchen",
+  "Commercial Kitchen Equipment",
+  "Induction Cooking Systems",
+  "Insulated Milk & Water Boilers",
+  "Tea & Coffee Brewing Equipment",
+  "Salem Showroom: Meyyanur Junction Main Road",
+  "Serving 12 Districts across Tamil Nadu",
+  "100% Genuine Manufacturer Warranties",
 ];
 
 export default function TrustTicker() {

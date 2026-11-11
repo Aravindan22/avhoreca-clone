@@ -6,12 +6,14 @@ import AnnouncementBar from "@/components/layout/AnnouncementBar";
 import TrustTicker from "@/components/layout/TrustTicker";
 import BrandsStrip from "@/components/layout/BrandsStrip";
 import WhatsAppFAB from "@/components/layout/WhatsAppFAB";
+import { BUSINESS_NAME, BRAND_NAME, DEALERSHIP_TITLE } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "AV Horeca Solutions — Commercial Kitchen Equipment Hyderabad",
+  title: `${BUSINESS_NAME} (${BRAND_NAME}) — ${DEALERSHIP_TITLE} | Salem`,
   description:
-    "Authorized dealer for Pradeep, Aeonic & iBrew. Commercial kitchen equipment — milk boilers, induction cookers, pots & pans, buffet products. Serving 500+ restaurants across Hyderabad, AP & Telangana.",
-  keywords: "commercial kitchen equipment hyderabad, milk boiler, induction cooker, pradeep cookware, aeonic induction, ibrew",
+    "DSK Enterprises: Authorized Dealer of Pradeep Commercial Kitchen And Beverage Equipment in Salem. Supplying commercial kitchen equipment, induction systems, milk boilers, filter coffee machines, and cookware across 12 Tamil Nadu districts.",
+  keywords:
+    "DSK Enterprises, DSK Kitchen Solutions, Pradeep commercial kitchen salem, pradeep stainless kitchen, milk boiler salem, commercial induction salem, horeca equipment tamil nadu",
 };
 
 export default function RootLayout({

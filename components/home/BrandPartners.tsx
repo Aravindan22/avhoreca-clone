@@ -1,18 +1,18 @@
 const brandPartners = [
   {
-    name: "PRADEEP",
-    range: "Pots & Pans · Electrical · Buffet",
-    badge: "Authorized Channel Partner",
+    name: "PRADEEP STAINLESS KITCHEN",
+    range: "Commercial Cookware · Hotpots · Food Prep · Infrastructure",
+    badge: "Authorised Dealer",
   },
   {
-    name: "AEONIC",
-    range: "Induction Equipment · Bulk Systems",
-    badge: "Authorized Dealer & Service",
+    name: "COMMERCIAL INDUCTION",
+    range: "Tabletop Woks · 3-Phase Bulk Cooking Cauldrons",
+    badge: "High Energy Efficiency (85%+)",
   },
   {
-    name: "iBREW",
-    range: "Filter Coffee · Tea · Milk Boilers",
-    badge: "Authorized Dealer & Service",
+    name: "BEVERAGE & BOILER SYSTEMS",
+    range: "PUF Insulated Milk Boilers · South Indian Filter Brewers",
+    badge: "Quality Guaranteed",
   },
 ];
 
@@ -21,7 +21,11 @@ export default function BrandPartners() {
     <section className="section">
       <div className="container">
         <div className="section-header">
-          <span className="section-label">Authorized Partner for</span>
+          <span className="section-label">Authorised Partnership</span>
+          <h2 className="section-title">Authentic Products Backed by Pradeep</h2>
+          <p className="section-desc">
+            DSK Enterprises is the official authorized dealer of Pradeep Commercial Kitchen and Beverage Equipment. Every item comes with direct manufacturer warranty and genuine documentation.
+          </p>
         </div>
         <div className="brand-partners-row">
           {brandPartners.map((b) => (
@@ -35,9 +39,9 @@ export default function BrandPartners() {
           ))}
         </div>
         <p className="brand-disclaimer">
-          All products 100% genuine.{" "}
+          100% genuine stainless steel equipment.{" "}
           <strong>
-            Warranty as per manufacturer policy — select products. Check before purchase.
+            Official warranty as per Pradeep manufacturer policy. Inspect in person at our Salem showroom.
           </strong>
         </p>
       </div>

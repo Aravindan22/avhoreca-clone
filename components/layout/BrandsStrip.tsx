@@ -1,9 +1,9 @@
 const brands = [
-  { name: "Pradeep", sub: "Channel Partner" },
-  { name: "Aeonic", sub: "Auth. Dealer" },
-  { name: "iBrew", sub: "Service Centre" },
-  { name: "ISI · NSF", sub: "Certifications" },
-  { name: "Since 2020", sub: "Established" },
+  { name: "Pradeep Stainless", sub: "Authorised Dealer" },
+  { name: "DSK Kitchen Solutions", sub: "Salem Showroom" },
+  { name: "12 TN Districts", sub: "Authorized Reach" },
+  { name: "SS 304 Food Grade", sub: "NSF Certified" },
+  { name: "HORECA Specialists", sub: "New & Upgrade Setups" },
 ];
 
 export default function BrandsStrip() {

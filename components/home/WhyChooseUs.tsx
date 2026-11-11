@@ -1,52 +1,51 @@
-import { WHATSAPP_URL, ADDRESS, PHONE_DISPLAY, PHONE_NUMBER, EMAIL } from "@/lib/constants";
+import {
+  WHATSAPP_URL,
+  ADDRESS,
+  PHONE_DISPLAY,
+  PHONE_NUMBER,
+  PHONE_LANDLINE,
+  EMAIL,
+  AUTHORIZED_DISTRICTS,
+  BUSINESS_NAME,
+} from "@/lib/constants";
 
 const usps = [
   {
     icon: "🛡️",
-    title: "Authorized Dealer — 100% Genuine Products",
-    desc: "Zero grey market, zero fake products. Every item we sell comes with manufacturer documentation and warranty.",
+    title: "Official Authorised Dealer — Pradeep Stainless Kitchen",
+    desc: "100% genuine products with manufacturer-backed warranties. Zero grey market or unbranded materials.",
   },
   {
-    icon: "🔧",
-    title: "Authorized Service Centre — We Don't Disappear After Sale",
-    desc: "Certified technicians and genuine spare parts. We service what we sell.",
+    icon: "🏪",
+    title: "Meyyanur, Salem Showroom — See It Before You Buy",
+    desc: "Visit our display center in Salem to touch, inspect, and test cookware, boilers, and induction units in person.",
   },
   {
-    icon: "👁️",
-    title: "See It Before You Buy",
-    desc: "500+ products on display at our Nagole showroom. Touch, test, and inspect before you commit.",
+    icon: "📍",
+    title: "Authorized Dealer for 12 Tamil Nadu Districts",
+    desc: "Official dealership territory across Salem, Hosur, Dharmapuri, Erode, Karur, Namakkal, Trichy, Thanjavur, and more.",
   },
   {
-    icon: "🚚",
-    title: "Same-Day Delivery in Hyderabad",
-    desc: "Order before noon — delivered the same day within Hyderabad. Next-day across AP & Telangana.",
+    icon: "⚡",
+    title: "Complete End-to-End HORECA Solutions",
+    desc: "From NSF SS 304 triply cookware to 3-phase commercial induction cauldrons and automated tea/coffee brewing systems.",
   },
   {
-    icon: "💡",
-    title: "Expert Guidance — Not Just Sales",
-    desc: "We recommend the right equipment for your kitchen, not the most expensive one.",
+    icon: "🤝",
+    title: "Tailored Guidance for New Setups & Upgrades",
+    desc: "Whether launching a new restaurant or upgrading an existing setup, we recommend the exact equipment size you need.",
   },
-];
-
-const cities = [
-  { name: "Hyderabad", note: "Same-day delivery" },
-  { name: "Vijayawada", note: "AP Coverage" },
-  { name: "Visakhapatnam", note: "AP Coverage" },
-  { name: "Warangal", note: "Telangana" },
-  { name: "Tirupati", note: "AP Coverage" },
-  { name: "Karimnagar", note: "Telangana" },
 ];
 
 export default function WhyChooseUs() {
   return (
-    <section className="section section-alt">
+    <section className="section section-alt" id="coverage">
       <div className="container">
         <div className="section-header">
-          <span className="section-label">Why Choose Us</span>
-          <h2 className="section-title">More Than Just a Shop</h2>
+          <span className="section-label">Why Choose {BUSINESS_NAME}</span>
+          <h2 className="section-title">Your Trusted HORECA Partner in Tamil Nadu</h2>
           <p className="section-desc">
-            Since 2020, across 500+ customers, every product we sold has been genuine.
-            Every customer got exactly what they ordered. That is our reputation and we guard it.
+            We bridge commercial kitchens with genuine Pradeep stainless equipment, local availability in Salem, and dedicated support across 12 authorized districts.
           </p>
         </div>
 
@@ -66,41 +65,49 @@ export default function WhyChooseUs() {
 
           {/* Right — Info cards */}
           <div className="why-cards">
-            {/* Coverage */}
+            {/* Coverage: 12 Districts */}
             <div className="why-info-card">
-              <h4 className="why-card-title">📍 Coverage Area</h4>
+              <h4 className="why-card-title">📍 Authorized Dealership Coverage (12 Districts)</h4>
               <div className="cities-grid">
-                {cities.map((c) => (
+                {AUTHORIZED_DISTRICTS.map((c) => (
                   <div key={c.name} className="city-item">
                     <span className="city-name">{c.name}</span>
                     <span className="city-note">{c.note}</span>
                   </div>
                 ))}
               </div>
-              <p className="pan-india-note">Pan-India shipping available on request</p>
+              <p className="pan-india-note">Direct dispatch from our Salem showroom across Tamil Nadu</p>
             </div>
 
             {/* Display Centre */}
             <div className="why-info-card">
-              <h4 className="why-card-title">🏪 Display Centre</h4>
+              <h4 className="why-card-title">🏪 Salem Display Showroom</h4>
               <address className="why-address">
-                <p>{ADDRESS.full}</p>
-                <p className="why-hours">{ADDRESS.hours}</p>
+                <p><strong>{ADDRESS.line1}</strong></p>
+                <p>{ADDRESS.line2}</p>
+                <p className="why-hours">🕒 {ADDRESS.hours}</p>
               </address>
               <a href={ADDRESS.mapsUrl} target="_blank" rel="noopener noreferrer" className="why-maps-link">
-                Get Directions on Google Maps →
+                Open in Google Maps →
               </a>
             </div>
 
             {/* Contact */}
             <div className="why-info-card">
-              <h4 className="why-card-title">📞 Quick Contact</h4>
+              <h4 className="why-card-title">📞 Connect Directly with DSK</h4>
               <div className="why-contacts">
-                <a href={`tel:${PHONE_NUMBER}`} className="why-contact-link">{PHONE_DISPLAY}</a>
+                <a href={`tel:${PHONE_NUMBER}`} className="why-contact-link">
+                  📞 Mobile: {PHONE_DISPLAY}
+                </a>
+                <a href={`tel:${PHONE_LANDLINE}`} className="why-contact-link">
+                  ☎ Phone: {PHONE_LANDLINE}
+                </a>
                 <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="why-contact-link why-wa">
                   💬 WhatsApp Us Now
                 </a>
-                <a href={`mailto:${EMAIL}`} className="why-contact-link">{EMAIL}</a>
+                <a href={`mailto:${EMAIL}`} className="why-contact-link">
+                  ✉ {EMAIL}
+                </a>
               </div>
             </div>
           </div>

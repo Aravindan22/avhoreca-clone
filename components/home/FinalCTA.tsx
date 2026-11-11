@@ -1,16 +1,15 @@
 import Link from "next/link";
-import { WHATSAPP_URL, ADDRESS } from "@/lib/constants";
+import { WHATSAPP_URL, ADDRESS, BUSINESS_NAME, BRAND_NAME } from "@/lib/constants";
 
 export default function FinalCTA() {
   return (
     <section className="section final-cta-section">
       <div className="container">
         <div className="final-cta-inner">
-          <span className="section-label">Get in Touch Today</span>
-          <h2 className="final-cta-title">Ready to Upgrade Your Kitchen?</h2>
+          <span className="section-label">Connect with Us Today</span>
+          <h2 className="final-cta-title">Upgrade Your Commercial Kitchen with {BUSINESS_NAME}</h2>
           <p className="final-cta-desc">
-            WhatsApp us now. Tell us your kitchen setup and what you need. We&apos;ll
-            recommend the right equipment for you — same day. No obligation.
+            Greetings from {BRAND_NAME}! We look forward to serving your food service establishment with authentic Pradeep products, induction cooking systems, and expert guidance.
           </p>
           <div className="final-cta-buttons">
             <a
@@ -19,14 +18,14 @@ export default function FinalCTA() {
               rel="noopener noreferrer"
               className="btn btn-primary btn-lg"
             >
-              WhatsApp for Free Quote
+              WhatsApp for Quick Quotation
             </a>
-            <Link href="/contact" className="btn btn-outline btn-lg">
-              Visit Our Showroom
+            <Link href="/contact" className="btn btn-outline btn-lg" style={{borderColor: '#CBD5E1', color: '#fff'}}>
+              Visit Our Salem Showroom
             </Link>
           </div>
           <p className="final-cta-address">
-            {ADDRESS.line1}, {ADDRESS.line2} — Mon–Sat 10 AM to 6 PM
+            📍 {ADDRESS.line1}, {ADDRESS.line2}
           </p>
         </div>
       </div>

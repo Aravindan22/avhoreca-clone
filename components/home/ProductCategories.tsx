@@ -11,8 +11,8 @@ export default function ProductCategories() {
             Commercial Kitchen Equipment Built for Every Operation
           </h2>
           <p className="section-desc">
-            Authorized channel partner for Pradeep and dealer for Aeonic and iBrew.
-            Everything your kitchen needs from beverage equipment to bulk cooking solutions.
+            Authorised Dealer of Pradeep Commercial Kitchen And Beverage Equipment.
+            Complete HORECA solutions from induction cooking to milk boilers, cookware, and kitchen infrastructure.
           </p>
         </div>
 

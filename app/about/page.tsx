@@ -1,103 +1,137 @@
-import { WHATSAPP_URL, ADDRESS, PHONE_DISPLAY, PHONE_NUMBER } from "@/lib/constants";
+import Link from "next/link";
+import Image from "next/image";
+import {
+  WHATSAPP_URL,
+  ADDRESS,
+  PHONE_DISPLAY,
+  PHONE_NUMBER,
+  PHONE_LANDLINE,
+  BUSINESS_NAME,
+  BRAND_NAME,
+  DEALERSHIP_TITLE,
+  AUTHORIZED_DISTRICTS,
+  CORE_OFFERINGS,
+} from "@/lib/constants";
 
 export default function AboutPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="section" style={{background:'var(--surface-2)'}}>
+      <section className="section" style={{ background: "var(--surface-2)" }}>
         <div className="container">
-          <div style={{maxWidth:'720px'}}>
-            <span className="section-label">About Us</span>
-            <h1 className="section-title" style={{textAlign:'left', marginBottom:'20px'}}>
-              Hyderabad&apos;s Trusted Commercial Kitchen Equipment Partner
+          <div style={{ maxWidth: "780px" }}>
+            <span className="section-label">About {BUSINESS_NAME}</span>
+            <h1 className="section-title" style={{ textAlign: "left", marginBottom: "18px" }}>
+              Salem&apos;s Authorised Dealer for Pradeep Commercial Kitchen &amp; Beverage Equipment
             </h1>
-            <p style={{fontSize:'17px', color:'var(--text-secondary)', lineHeight:'1.75'}}>
-              AV Horeca Solutions was established in 2020 in Nagole, Hyderabad, with a simple mission:
-              supply genuine, authorized commercial kitchen equipment to restaurants, hotels and cloud
-              kitchens — with real after-sales support. No grey market. No disappearing act after the sale.
+            <p style={{ fontSize: "17px", color: "var(--text-secondary)", lineHeight: "1.75" }}>
+              Greetings from <strong>{BUSINESS_NAME} ({BRAND_NAME})</strong>! We are the official Authorised Dealer of Pradeep Stainless Kitchen in Salem, dedicated to providing complete HORECA commercial kitchen solutions, energy-saving induction systems, insulated boilers, and heavy-duty cookware across 12 authorized districts in Tamil Nadu.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Story */}
+      {/* Story & Showroom Section */}
       <section className="section">
         <div className="container">
-          <div style={{display:'grid', gridTemplateColumns:'1fr 1fr', gap:'64px', alignItems:'center'}}>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "60px", alignItems: "center" }}>
             <div>
-              <span className="section-label">Our Story</span>
-              <h2 className="section-title" style={{textAlign:'left', marginBottom:'20px'}}>Authorized. Genuine. Since 2020.</h2>
-              <div style={{display:'flex', flexDirection:'column', gap:'16px', fontSize:'15px', color:'var(--text-secondary)', lineHeight:'1.75'}}>
+              <span className="section-label">Our Mission</span>
+              <h2 className="section-title" style={{ textAlign: "left", marginBottom: "20px" }}>
+                Quality Products. Expert Guidance. No Compromise.
+              </h2>
+              <div style={{ display: "flex", flexDirection: "column", gap: "16px", fontSize: "15px", color: "var(--text-secondary)", lineHeight: "1.75" }}>
                 <p>
-                  Founded in Nagole, Hyderabad in 2020, we started as a focused distributor for Pradeep
-                  Stainless India — one of India&apos;s most trusted commercial kitchen equipment brands. 
-                  Over the years, we expanded to become authorized dealers and service centres for Aeonic
-                  (commercial induction) and iBrew (beverage equipment).
+                  At {BUSINESS_NAME}, we understand that running a commercial kitchen — whether a high-speed café, fine-dining restaurant, cloud kitchen, or massive wedding hall — requires equipment that performs flawlessly 365 days a year.
                 </p>
                 <p>
-                  Today, we serve 500+ restaurants, hotels, cloud kitchens, and catering businesses across
-                  Telangana, Andhra Pradesh, and pan-India. Our display centre in Nagole lets customers
-                  touch, test, and inspect equipment before they buy — something rare in this industry.
+                  As an authorised partner for Pradeep Stainless Kitchen, every piece of cookware, hotpot, induction cauldron, and milk boiler we supply is 100% genuine, food-grade SS 304, and backed by manufacturer warranty.
                 </p>
                 <p>
-                  What sets us apart is what happens <em>after</em> the sale. As an authorized service
-                  centre for all three brands, we arrange certified technicians and genuine spare parts.
-                  We don&apos;t disappear. That&apos;s our reputation, and we guard it.
+                  Our physical display showroom on <strong>Junction Main Road, Meyyanur, Salem</strong> welcomes food service entrepreneurs and executive chefs to inspect, test, and consult before purchasing.
                 </p>
               </div>
             </div>
-            <div style={{display:'flex', flexDirection:'column', gap:'16px'}}>
-              {[
-                { year: '2020', event: 'Founded in Nagole, Hyderabad. Authorized Pradeep Channel Partner.' },
-                { year: '2021', event: 'Expanded to Aeonic induction equipment dealership.' },
-                { year: '2022', event: 'iBrew authorized dealer & service centre status achieved.' },
-                { year: '2023', event: 'Crossed 300+ customers. Display centre expanded to 500+ products.' },
-                { year: '2024', event: 'Pan-India shipping launched. 400+ customers milestone.' },
-                { year: '2026', event: '500+ customers served. Google rating: 5.0 stars, 74+ reviews.' },
-              ].map((item) => (
-                <div key={item.year} style={{display:'flex', gap:'20px', alignItems:'flex-start'}}>
-                  <span style={{fontFamily:'Playfair Display, serif', fontWeight:'700', fontSize:'16px', color:'var(--ember)', minWidth:'40px', flexShrink:0}}>{item.year}</span>
-                  <div style={{borderLeft:'2px solid var(--border)', paddingLeft:'20px', fontSize:'14px', color:'var(--text-secondary)', paddingBottom:'8px'}}>{item.event}</div>
+
+            <div style={{ background: "var(--surface-0)", border: "1px solid var(--border)", borderRadius: "var(--r-lg)", padding: "32px", display: "flex", flexDirection: "column", gap: "20px" }}>
+              <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+                <Image
+                  src="/images/dsk-logo.jpg"
+                  alt={BRAND_NAME}
+                  width={64}
+                  height={64}
+                  style={{ borderRadius: "8px", objectFit: "contain" }}
+                />
+                <div>
+                  <h3 style={{ fontFamily: "Playfair Display, serif", fontSize: "20px", fontWeight: "700", color: "var(--ink)" }}>
+                    {BUSINESS_NAME}
+                  </h3>
+                  <p style={{ fontSize: "12px", color: "var(--ember)", fontWeight: "600" }}>
+                    {DEALERSHIP_TITLE}
+                  </p>
                 </div>
-              ))}
+              </div>
+
+              <div style={{ borderTop: "1px solid var(--border-light)", paddingTop: "16px" }}>
+                <h4 style={{ fontSize: "14px", fontWeight: "700", color: "var(--ink)", marginBottom: "10px" }}>
+                  What We Offer:
+                </h4>
+                <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "8px", fontSize: "13px", color: "var(--text-secondary)" }}>
+                  {CORE_OFFERINGS.map((item) => (
+                    <li key={item} style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+                      <span style={{ color: "var(--ember)", fontWeight: "800" }}>✓</span> {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div style={{ borderTop: "1px solid var(--border-light)", paddingTop: "16px", fontSize: "13px", color: "var(--text-muted)" }}>
+                📍 Ground floor, 116/28/3, Junction Main Road, Meyyanur, Salem – 636004
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Brand partnerships */}
+      {/* Authorized Districts Strip */}
       <section className="section section-alt">
         <div className="container">
           <div className="section-header">
-            <span className="section-label">Our Partnerships</span>
-            <h2 className="section-title">Authorized by the Best</h2>
+            <span className="section-label">Territory Coverage</span>
+            <h2 className="section-title">Authorised Dealer for 12 Tamil Nadu Districts</h2>
+            <p className="section-desc">
+              We provide equipment delivery, product demonstrations, and technical support across these designated regions:
+            </p>
           </div>
-          <div className="brand-partners-row">
-            {[
-              { name:'PRADEEP', desc:'Authorized Channel Partner for Pradeep Stainless India Pvt Ltd. Full range of commercial cookware, electrical equipment and buffet products.', badge:'Channel Partner' },
-              { name:'AEONIC', desc:'Authorized Dealer & Service Centre for Aeonic commercial induction cookers — table-top to 3-phase bulk systems.', badge:'Dealer & Service Centre' },
-              { name:'iBREW', desc:'Authorized Dealer & Service Centre for iBrew commercial tea, coffee and milk boiler equipment.', badge:'Dealer & Service Centre' },
-            ].map((b) => (
-              <div key={b.name} className="brand-partner-card" style={{textAlign:'left'}}>
-                <div className="bp-name">{b.name}</div>
-                <p style={{fontSize:'13px', color:'var(--text-secondary)', lineHeight:'1.65', margin:'10px 0 16px'}}>{b.desc}</p>
-                <div className="bp-badge"><span className="bp-check">✓</span> {b.badge}</div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "16px" }}>
+            {AUTHORIZED_DISTRICTS.map((d) => (
+              <div key={d.name} style={{ background: "var(--surface-0)", border: "1px solid var(--border)", borderRadius: "var(--r-md)", padding: "16px", textAlign: "center" }}>
+                <div style={{ fontWeight: "700", fontSize: "15px", color: "var(--ink)" }}>{d.name}</div>
+                <div style={{ fontSize: "11px", color: "var(--ember)", marginTop: "4px" }}>{d.note}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Contact info */}
+      {/* CTA */}
       <section className="section">
-        <div className="container" style={{textAlign:'center'}}>
-          <span className="section-label">Get in Touch</span>
-          <h2 className="section-title">Visit Our Display Centre</h2>
-          <p className="section-desc" style={{marginBottom:'40px'}}>{ADDRESS.full}<br/>{ADDRESS.hours}</p>
-          <div style={{display:'flex', gap:'16px', justifyContent:'center', flexWrap:'wrap'}}>
-            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn btn-wa btn-lg">WhatsApp Us</a>
-            <a href={`tel:${PHONE_NUMBER}`} className="btn btn-ghost-dark btn-lg">{PHONE_DISPLAY}</a>
-            <a href={ADDRESS.mapsUrl} target="_blank" rel="noopener noreferrer" className="btn btn-outline btn-lg">Get Directions →</a>
+        <div className="container" style={{ textAlign: "center" }}>
+          <span className="section-label">Showroom Visit</span>
+          <h2 className="section-title">Visit {BRAND_NAME} in Salem</h2>
+          <p className="section-desc" style={{ marginBottom: "36px" }}>
+            {ADDRESS.full}<br />{ADDRESS.hours}
+          </p>
+          <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap" }}>
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn btn-wa btn-lg">
+              WhatsApp: {PHONE_DISPLAY}
+            </a>
+            <a href={`tel:${PHONE_NUMBER}`} className="btn btn-ghost-dark btn-lg">
+              Call Showroom: {PHONE_LANDLINE}
+            </a>
+            <Link href="/contact" className="btn btn-outline btn-lg">
+              Get Directions &amp; Contact →
+            </Link>
           </div>
         </div>
       </section>

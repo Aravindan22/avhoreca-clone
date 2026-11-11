@@ -1,10 +1,10 @@
 const stats = [
-  { num: "500+", label: "Restaurants & Hotels Served" },
-  { num: "Genuine", label: "Authorized — Not Grey Market" },
-  { num: "3 Brands", label: "Authorized Service Centre" },
-  { num: "Same Day", label: "Delivery — Hyderabad" },
-  { num: "Nagole", label: "Display Centre — See Before Buy" },
-  { num: "Since 2020", label: "Established in Hyderabad" },
+  { num: "Pradeep", label: "Authorised Dealer" },
+  { num: "12 Districts", label: "Authorized TN Coverage" },
+  { num: "Salem", label: "Meyyanur Showroom" },
+  { num: "SS 304", label: "NSF Certified Food Grade" },
+  { num: "Quick Dispatch", label: "Direct from Showroom" },
+  { num: "HORECA", label: "New & Upgrade Setups" },
 ];
 
 export default function TrustBar() {

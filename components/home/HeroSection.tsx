@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { WHATSAPP_URL } from "@/lib/constants";
+import { WHATSAPP_URL, BUSINESS_NAME, BRAND_NAME, DEALERSHIP_TITLE, CORE_OFFERINGS } from "@/lib/constants";
 
 export default function HeroSection() {
   return (
@@ -10,25 +10,33 @@ export default function HeroSection() {
           {/* Left — Copy */}
           <div className="hero-copy fade-up">
             <div className="hero-eyebrows">
-              <span className="eyebrow-pill">Since 2020</span>
-              <span className="eyebrow-pill">Nagole, Hyderabad</span>
+              <span className="eyebrow-pill eyebrow-pill-accent">Authorised Dealer</span>
+              <span className="eyebrow-pill">Pradeep Stainless Kitchen</span>
+              <span className="eyebrow-pill">Salem, Tamil Nadu</span>
             </div>
             <h1 className="hero-h1">
-              Commercial Kitchen Equipment You Can <em>Truly Trust</em>
+              Complete HORECA Kitchen Solutions by <em>{BUSINESS_NAME}</em>
             </h1>
             <p className="hero-desc">
-              Authorized dealer for Pradeep, Aeonic &amp; iBrew. Complete range of
-              beverage equipment, induction cookers, electrical machines, pots &amp;
-              pans and buffet products. Serving 500+ restaurants, hotels and cafés
-              across India. Headquartered in Hyderabad — primary markets AP &amp;
-              Telangana, shipping Pan India.
+              Greetings from <strong>{BUSINESS_NAME} ({BRAND_NAME})</strong>! 🙏 As the {DEALERSHIP_TITLE}, we supply premium commercial kitchen equipment, energy-saving induction cooking systems, insulated milk boilers, tea/coffee brewers, and NSF-certified cookware. Whether you&apos;re starting a new kitchen or upgrading an existing one, we&apos;re here to help with quality products and expert guidance.
             </p>
-            <div className="brand-pills">
-              <span className="brand-label">Authorized for:</span>
-              <span className="brand-pill">PRADEEP</span>
-              <span className="brand-pill">AEONIC</span>
-              <span className="brand-pill">iBREW</span>
+
+            {/* Checklist of core offerings */}
+            <div className="hero-checklist">
+              {CORE_OFFERINGS.map((item) => (
+                <div key={item} className="hero-check-item">
+                  <span className="hero-check-icon">✓</span>
+                  <span>{item}</span>
+                </div>
+              ))}
             </div>
+
+            <div className="brand-pills">
+              <span className="brand-label">Authorized For:</span>
+              <span className="brand-pill">PRADEEP STAINLESS KITCHEN</span>
+              <span className="brand-pill">12 TN DISTRICTS</span>
+            </div>
+
             <div className="hero-ctas">
               <a
                 href={WHATSAPP_URL}
@@ -42,15 +50,16 @@ export default function HeroSection() {
                 Get Free Quote on WhatsApp
               </a>
               <Link href="/products" className="btn btn-ghost-dark">
-                Browse All Products →
+                Browse HORECA Solutions →
               </Link>
             </div>
+
             <div className="hero-stats">
               {[
-                { num: "500+", label: "Happy Customers" },
-                { num: "3", label: "Authorized Brands" },
-                { num: "6yr", label: "In Business" },
-                { num: "2", label: "States Covered" },
+                { num: "12", label: "Authorized Districts" },
+                { num: "100%", label: "Genuine Pradeep" },
+                { num: "Salem", label: "Display Showroom" },
+                { num: "Expert", label: "Kitchen Guidance" },
               ].map((s) => (
                 <div key={s.label} className="hero-stat">
                   <span className="hero-stat-num">{s.num}</span>
@@ -63,30 +72,28 @@ export default function HeroSection() {
           {/* Right — Showcase Card */}
           <div className="hero-card fade-up">
             <div className="hero-product-card">
-              <div className="hero-card-badge">Hero Product</div>
+              <div className="hero-card-badge">Featured Pradeep Product</div>
               <div className="hero-product-image">
                 <div className="product-img-placeholder">
                   <span className="product-emoji">🫖</span>
                 </div>
               </div>
               <div className="hero-card-content">
-                <h3 className="hero-card-title">Insulated Milk Boiler</h3>
+                <h3 className="hero-card-title">Commercial Insulated Milk Boiler</h3>
                 <p className="hero-card-desc">
-                  PUF double-wall insulation — milk stays hot for 6+ hours.
-                  Saves electricity daily. Dispenses hot milk AND hot water.
-                  Hyderabad&apos;s best-selling commercial beverage machine.
+                  PUF double-wall insulation — keeps milk steaming hot for 6+ hours with zero burning. Drastically reduces electricity bills. Dispenses hot milk &amp; hot water through dedicated food-grade taps.
                 </p>
                 <ul className="hero-card-bullets">
-                  <li>Milk stays hot 6+ hours — no reheating ever</li>
-                  <li>PUF insulation cuts electricity bills</li>
-                  <li>Hot Milk + Hot Water from single dispenser</li>
-                  <li>ISI certified — food grade safe</li>
+                  <li>6+ hours heat retention without reheating</li>
+                  <li>Food grade SS 304 construction</li>
+                  <li>PUF thermal insulation cuts daily power cost</li>
+                  <li>Dual dispenser for milk and boiling water</li>
                 </ul>
                 <div className="hero-card-models">
-                  <span className="model-tag">111600 · 5L</span>
-                  <span className="model-tag">111612 · 12L</span>
-                  <span className="model-tag">111620 · 20L</span>
-                  <span className="model-tag">111630 · 30L</span>
+                  <span className="model-tag">5 Litres</span>
+                  <span className="model-tag">12 Litres</span>
+                  <span className="model-tag">20 Litres</span>
+                  <span className="model-tag">30 Litres</span>
                 </div>
                 <a
                   href={WHATSAPP_URL}
@@ -94,7 +101,7 @@ export default function HeroSection() {
                   rel="noopener noreferrer"
                   className="btn btn-primary btn-full"
                 >
-                  Enquire Now →
+                  Request Quote from Salem Showroom →
                 </a>
               </div>
             </div>

@@ -1,12 +1,12 @@
 import Link from "next/link";
-import { WHATSAPP_URL } from "@/lib/constants";
+import { WHATSAPP_URL, BUSINESS_NAME } from "@/lib/constants";
 
 const serviceTags = [
-  "Pradeep Service",
-  "iBrew Service",
-  "Aeonic Service",
-  "Genuine Spare Parts",
-  "On-Site Visits",
+  "Pradeep Equipment Sizing",
+  "Induction Setup Guidance",
+  "Insulated Boilers",
+  "Showroom Demonstrations",
+  "Salem & 12 Districts Support",
 ];
 
 export default function ServiceBanner() {
@@ -15,14 +15,12 @@ export default function ServiceBanner() {
       <div className="container">
         <div className="service-banner-grid">
           <div className="service-copy">
-            <span className="section-label-dark">Authorized Service Centre</span>
+            <span className="section-label-dark">Authorised Dealer Service</span>
             <h2 className="service-title">
-              Equipment Not Working? We Get It Fixed. Right.
+              Planning a New Kitchen or Upgrading Your Equipment?
             </h2>
             <p className="service-desc">
-              Authorized service centre for Pradeep, iBrew and Aeonic. We arrange
-              the manufacturer&apos;s certified technicians and genuine spare parts.
-              Transparent pricing — quote before work starts. Fast turnaround.
+              {BUSINESS_NAME} is here to assist you with genuine Pradeep products, sizing recommendations, and after-sales coordination. Visit our Salem showroom or request an instant quotation on WhatsApp.
             </p>
             <div className="service-tags">
               {serviceTags.map((tag) => (
@@ -37,10 +35,10 @@ export default function ServiceBanner() {
               rel="noopener noreferrer"
               className="btn btn-wa"
             >
-              Book Service on WhatsApp
+              Consult on WhatsApp
             </a>
             <Link href="/about" className="btn btn-ghost-light">
-              Learn More →
+              About DSK Enterprises →
             </Link>
           </div>
         </div>
