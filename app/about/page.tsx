@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import logoImg from "@/public/images/dsk-logo.jpg";
 import {
   WHATSAPP_URL,
   ADDRESS,
@@ -56,7 +57,7 @@ export default function AboutPage() {
             <div style={{ background: "var(--surface-0)", border: "1px solid var(--border)", borderRadius: "var(--r-lg)", padding: "32px", display: "flex", flexDirection: "column", gap: "20px" }}>
               <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
                 <Image
-                  src="/images/dsk-logo.jpg"
+                  src={logoImg}
                   alt={BRAND_NAME}
                   width={64}
                   height={64}

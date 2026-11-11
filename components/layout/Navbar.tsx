@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import logoImg from "@/public/images/dsk-logo.jpg";
 import {
   WHATSAPP_URL,
   PHONE_DISPLAY,
@@ -52,7 +53,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="nav-logo">
           <Image
-            src="/images/dsk-logo.jpg"
+            src={logoImg}
             alt={`${BRAND_NAME} - ${BUSINESS_NAME}`}
             width={52}
             height={52}

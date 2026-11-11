@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import logoImg from "@/public/images/dsk-logo.jpg";
 import {
   BUSINESS_NAME,
   BRAND_NAME,
@@ -49,7 +50,7 @@ export default function Footer() {
           <div className="footer-brand">
             <div className="footer-logo">
               <Image
-                src="/images/dsk-logo.jpg"
+                src={logoImg}
                 alt={`${BRAND_NAME} - ${BUSINESS_NAME}`}
                 width={48}
                 height={48}
