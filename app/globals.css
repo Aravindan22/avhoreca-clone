@@ -250,6 +250,7 @@ address { font-style: normal; }
   object-fit: contain;
   border-radius: var(--r-sm);
   background: #fff;
+  flex-shrink: 0;
 }
 .logo-text-group {
   display: flex;
@@ -951,6 +952,10 @@ address { font-style: normal; }
 }
 @media (max-width: 480px) {
   .container { padding: 0 16px; }
+  .nav-inner { gap: 12px; }
+  .logo-img { width: 44px; height: 44px; }
+  .logo-brand { font-size: 16px; }
+  .logo-sub { font-size: 9px; letter-spacing: 0.03em; }
   .trust-bar-grid { grid-template-columns: repeat(2, 1fr); }
   .serve-grid { grid-template-columns: repeat(2, 1fr); }
   .final-cta-buttons { flex-direction: column; align-items: stretch; }

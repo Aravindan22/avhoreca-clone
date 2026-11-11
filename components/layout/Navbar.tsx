@@ -62,7 +62,7 @@ export default function Navbar() {
           />
           <div className="logo-text-group">
             <span className="logo-brand">
-              DSK <em>Kitchen</em>
+              DSK <em>Kitchen Solutions</em>
             </span>
             <span className="logo-sub">Pradeep Authorised Dealer · Salem</span>
           </div>
